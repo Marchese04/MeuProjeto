@@ -1,0 +1,82 @@
+ .navbar-custom {
+    background-color: #d60000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1
+ }
+
+.logo-bg {
+    position: absolute;
+    left: 0;
+    background: white;
+    padding: 14px 70px;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.logo-bg img {
+    height: 30px;
+}
+
+.navbar-custom .nav-link{
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link.active {
+    border-bottom: 2px solid white;
+ }
+
+.navbar-custom .nav-link:hover {
+    color: #f5f5f5 !important;
+}
+
+/* ======= TEMAS ======= */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .navbar-custom {
+  background-color: #d60000;
+}
+
+body.light-mode .logo-bg {
+  background: white;
+}
+
+body.light-mode h2,
+body.light-mode span,
+body.light-mode p {
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar-custom {
+  background-color: #d60000;
+}
+
+body.dark-mode .logo-bg {
+  background: black;
+}
+
+body.dark-mode h2,
+body.dark-mode span,
+body.dark-mode p {
+  color: #f1f1f1;
+}
+
+/* ======= BOTÃO FIXO ======= */
+#botaoTema {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  z-index: 2000;
+}
+#theme-icon {
+  font-size: 1.2rem;
+}
