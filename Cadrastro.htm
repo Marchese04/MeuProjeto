@@ -54,8 +54,9 @@
 
     #botãoTema{
       position:fixed;
-      right:0px;
+      left:0px;
       top:0px;
+      color: red;
     }
 
   </style>
@@ -63,11 +64,12 @@
 <body>
   <div id="tudo">
   
-    <div id="botãoTema" class="mb-3">
-          <button type="button" id="theme-toggle" class="btn btn-outline-light">
-           <i class="bi bi-moon-fill"></i> Tema
-          </button>
-        </div>
+    <div class="form-check form-switch" id="botãoTema">
+      <input class="form-check-input" type="checkbox" id="theme-toggle">
+      <label class="form-check-label" for="theme-toggle">
+        <i id="theme-icon" class="bi bi-sun"></i>
+      </label>
+    </div>
 
     <fieldset id="formulario1">
 

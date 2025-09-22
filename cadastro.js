@@ -29,21 +29,31 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 })()
 
-const toggleButton = document.getElementById('theme-toggle');
+const toggleSwitch = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
 const form = document.getElementById('formulario1');
 
 function applyTheme(theme) {
   form.classList.remove('light-mode', 'dark-mode');
   form.classList.add(theme);
   localStorage.setItem('theme', theme);
+
+  if (theme === 'dark-mode') {
+    themeIcon.classList.replace('bi-sun', 'bi-moon');
+    toggleSwitch.checked = true;
+  } else {
+    themeIcon.classList.replace('bi-moon', 'bi-sun');
+    toggleSwitch.checked = false;
+  }
 }
 
+// Carrega tema salvo
 const savedTheme = localStorage.getItem('theme') || 'light-mode';
 applyTheme(savedTheme);
 
-toggleButton.addEventListener('click', () => {
-  const currentTheme = form.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-  const newTheme = currentTheme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+// Alterna tema ao clicar no switch
+toggleSwitch.addEventListener('change', () => {
+  const newTheme = toggleSwitch.checked ? 'dark-mode' : 'light-mode';
   applyTheme(newTheme);
 });
 
