@@ -47,11 +47,9 @@ function applyTheme(theme) {
   }
 }
 
-// Carregar tema salvo ou padrão claro
 const savedTheme = localStorage.getItem('theme') || 'light-mode';
 applyTheme(savedTheme);
 
-// Alternar tema quando mudar o switch
 toggleSwitch.addEventListener('change', () => {
   const newTheme = toggleSwitch.checked ? 'dark-mode' : 'light-mode';
   applyTheme(newTheme);

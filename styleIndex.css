@@ -19,19 +19,18 @@
 }
 
 .navbar-custom .nav-link{
-    color: #fff !important;
+    color: #ffffff !important;
     font-weight: 500;
 }
 
 .navbar-custom .nav-link.active {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(255, 255, 255);
  }
 
-.navbar-custom .nav-link:hover {
-    color: #f5f5f5 !important;
+ .navbar-custom .nav-link:hover {
+    color: #000000 !important;
 }
 
-/* ======= TEMAS ======= */
 body.light-mode {
   background-color: #ffffff;
   color: #000000;
@@ -67,16 +66,21 @@ body.dark-mode .logo-bg {
 body.dark-mode h2,
 body.dark-mode span,
 body.dark-mode p {
-  color: #f1f1f1;
+  color: #f7f7f7;
 }
 
-/* ======= BOTÃO FIXO ======= */
-#botaoTema {
+.botaoTema {
   position: absolute;
   top: 60px;
   left: 0px;
   z-index: 2000;
 }
-#theme-icon {
+.theme-icon {
   font-size: 1.2rem;
+}
+
+#Cards{
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
